@@ -29,6 +29,23 @@
         </ol>
     </div>
 
+    <div id="app-5">
+        <p>{{msg}}</p>
+        <button v-on:click="reverseMsg">逆转消息</button>
+    </div>
+
+    <div id="app-6">
+        <p>{{msg}}</p>
+        <input v-model="msg"/>
+    </div>
+    <div id="app-7">
+        <ol>
+            <todo-item v-for="item in groceryList"
+              v-bind:todo="item"
+              v-bind:key="item.id">
+            </todo-item>
+        </ol>
+    </div>
     <script>
         var app = new Vue({
             el: '#app',
@@ -61,6 +78,44 @@
                 ]
             }
         })
+
+        var app5 = new Vue({
+          el: '#app-5',
+          data: {
+            msg: 'Hello Vue.js'
+          },
+          methods: {
+            reverseMsg: function () {
+              this.msg = this.msg.split('').reverse().join('')
+            }
+          }
+        })
+
+        var app6 = new Vue({
+          el: '#app-6',
+          data: {
+            msg: 'Hello Vue!'
+          }
+        })
+
+        Vue.component('todo-item',{
+          props: ['todo'],
+          template: '<li>{{todo.text}}</li>'
+        })
+
+        var app7 = new Vue({
+          el: '#app-7',
+          data: {
+            groceryList: [
+              { id: 0,text: '蔬菜'},
+              { id: 1,text: '奶酪'},
+              { id: 2,text: '随便其他什么'}
+            ]
+          }
+        })
+
+
+
     </script>
 </body>
 </html>
