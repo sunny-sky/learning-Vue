@@ -46,7 +46,48 @@
             </todo-item>
         </ol>
     </div>
+
+    <div id="app-8">
+        <p>Using mustaches:{{rawHtml}}</p>
+        <p>Using v-html directive:<span v-html="rawHtml"></span></p>
+    </div>
+
+    <div id="app-9">
+        <button v-bind:disable="isButtonDisable">Button</button>
+        <button @click="changeDisable">改变isButtonDisable</button>
+        <p>isButtonDisbale=false时，disable属性将直接不加载</p>
+    </div>
+
+    <div id="app-10">
+        <p>使用JavaScript表达式</p>
+        <p>number+1={{number + 1}},{{ok ? 'YES':'NO'}}</p>
+        <p>反转message{{message}}，结果是：{{message.split('').reverse().join('')}}</p>
+        <div :id="'list-'+id">div内的id的值有表达式</div>
+    </div>
+
     <script>
+        var app10 = new Vue({
+          el: '#app-10',
+          data: {
+            number: 10,
+            ok: false,
+            message: 'bilibili',
+            id: 9527
+        }
+        })
+
+        var app9 = new Vue({
+          el: '#app-9',
+          data: {
+            isButtonDisable: 'true'
+          },
+          methods:{
+            changeDisable: function(){
+              this.isButtonDisable = !this.isButtonDisable
+            }
+          }
+        })
+
         var app = new Vue({
             el: '#app',
             data: {
@@ -111,6 +152,13 @@
               { id: 1,text: '奶酪'},
               { id: 2,text: '随便其他什么'}
             ]
+          }
+        })
+
+        var app8 = new Vue({
+          el: '#app-8',
+          data: {
+            rawHtml: '<span style="color:red">This should be red!</span>'
           }
         })
 
