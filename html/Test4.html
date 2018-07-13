@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="static" v-bind:class="{active:isActive,'text-danger':hasError}">???</div>
+<div id="app-1" v-bind:class="classObject">用classObject表示class参数</div>
+<div id="app-2" v-bind:class="classObject">用计算属性表示class参数</div>
+</body>
+<script src="../vue/vue.js"></script>
+<script>
+  var vm = new Vue({
+    el:'.static',
+    data:{
+      isActive:true,
+      hasError:false
+    }
+  })
+  var vm2 = new Vue({
+    el:'#app-1',
+    data:{
+      classObject:{
+        acative:true,
+        'text-danger':false
+      }
+    }
+  })
+  var vm3 = Vue({
+    el:'#app-2',
+    data:{
+      isActive:true,
+      error:false
+    },
+    computed:{
+      classObject:function(){
+        return {
+          active:this.isActive && !this.error,
+          'text-danger': this.error && this.error.type ==='false'
+        }
+      }
+    }
+  })
+</script>
+</html>
