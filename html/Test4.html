@@ -8,6 +8,13 @@
 <div class="static" v-bind:class="{active:isActive,'text-danger':hasError}">???</div>
 <div id="app-1" v-bind:class="classObject">用classObject表示class参数</div>
 <div id="app-2" v-bind:class="classObject">用计算属性表示class参数</div>
+<div id="app-3" v-bind:class="[activeClass,errorClass]">数组语法</div>
+<div id="app-4" v-bind:class="[isActive ? activeClass : ' ',errorClass]">三元表达式,isActive 是 truthy时才添加activeClass</div>
+<div id="app-5" v-bind:class="[{active: isActive},errorClass]">在数组语法中也可以使用对象语法</div>
+<div id="app-6">
+  <my-component class="baz boo">用在组件上</my-component>
+</div>
+<my-component>最外层使用my-component组件无法渲染为p标签</my-component>
 </body>
 <script src="../vue/vue.js"></script>
 <script>
@@ -27,7 +34,7 @@
       }
     }
   })
-  var vm3 = Vue({
+  var vm3 = new Vue({
     el:'#app-2',
     data:{
       isActive:true,
@@ -42,5 +49,34 @@
       }
     }
   })
+  var vm4 = new Vue({
+    el:'#app-3',
+    data:{
+      activeClass:'active',
+      errorClass:'text-danger'
+    }
+  })
+  var vm5 = new Vue({
+    el:'#app-4',
+    data: {
+      isActive: '',
+      errorClass:'text-danger'
+    }
+  })
+  var vm6 = new Vue({
+    el: '#app-5',
+    data: {
+      isActive: true,
+      errorClass: false
+    }
+  })
+  Vue.component('my-component',{
+    template:'<p class="foo bar">Hi</p>'
+  })
+  var vm7 = new Vue({
+    el: '#app-6',
+
+  })
+
 </script>
 </html>

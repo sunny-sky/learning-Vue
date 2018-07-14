@@ -13,12 +13,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Test4.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/Test4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="296">
+              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+              <folding>
+                <element signature="e#398#480#0" />
+                <element signature="e#502#619#0" />
+                <element signature="e#637#915#0" />
+                <element signature="e#1011#1032#0" />
+                <element signature="e#1247#1268#0" />
+                <element signature="e#1444#1466#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,7 +34,7 @@
       <file leaf-file-name="Test3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/Test3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
+            <state relative-caret-position="552">
               <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-end-line="24" selection-end-column="37" />
             </state>
           </provider>
@@ -147,11 +155,12 @@
       <workItem from="1531313764569" duration="4143000" />
       <workItem from="1531403670692" duration="2236000" />
       <workItem from="1531492579384" duration="866000" />
+      <workItem from="1531530696704" duration="2912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11233000" />
+    <option name="totallyTimeSpent" value="14145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1897" y="71" width="1750" height="873" extended-state="0" />
@@ -187,6 +196,28 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/Test4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#398#480#0" />
+            <element signature="e#502#619#0" />
+            <element signature="e#637#915#0" />
+            <element signature="e#1011#1032#0" />
+            <element signature="e#1247#1268#0" />
+            <element signature="e#1444#1466#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/Test3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/Test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -241,15 +272,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/Test3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
+        <state relative-caret-position="552">
           <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/Test4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="296">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="e#398#480#0" />
+            <element signature="e#502#619#0" />
+            <element signature="e#637#915#0" />
+            <element signature="e#1011#1032#0" />
+            <element signature="e#1247#1268#0" />
+            <element signature="e#1444#1466#0" />
+          </folding>
         </state>
       </provider>
     </entry>
