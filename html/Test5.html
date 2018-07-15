@@ -36,11 +36,76 @@
   <p>很少改变，则使用 v-if 较好</p>
   <button @click="toggleOK">toggleOK</button>
 
+
 </div>
-
-
+<ul id="example1">
+  <li v-for="item in items">
+    {{item.message}}
+  </li>
+</ul>
+<ul id="example2">
+  <li v-for="(item, index) in items">
+    {{ parentMessage }} - {{ index }}-{{ index + 1 }} - {{ item.message }}
+  </li>
+</ul>
+<ul id="v-for-object" class="demo">
+  <li v-for="value in object">
+    {{ value }}
+  </li>
+</ul>
+<ul id="v-for-object1" class="demo">
+  <li v-for="(value, key) in object">
+    {{ key }}: {{ value }}
+  </li>
+</ul>
+<ul id="v-for-object2" class="demo">
+  <li v-for="(value, key, index) in object">
+    {{ index + 1 }}. {{ key }}: {{ value }}
+  </li>
+</ul>
 <script src="../vue/vue.js"></script>
 <script>
+var vm6 = new Vue({
+  el:'#v-for-object2',
+  data:{
+    object:{
+      firstName:'Jojn',
+      lastName:'Doe',
+      age:30
+    }
+  }
+})
+var vm5 = new Vue({
+  el:'#v-for-object1',
+  data:{
+    object:{
+      firstName:'Jojn',
+      lastName:'Doe',
+      age:30
+    }
+  }
+})
+var vm4 = new Vue({
+  el:'#v-for-object',
+  data:{
+    object:{
+      firstName:'Jojn',
+      lastName:'Doe',
+      age:30
+    }
+  }
+})
+
+var vm3 = new Vue({
+    el:'#example2',
+    data:{
+      parentMessage:'Parent',
+      items: [
+        { message: 'Foo' },
+        { message: 'Bar' }
+      ]
+    }
+  })
 var vm1 = new Vue({
   el:'#app1',
   data:{
@@ -59,6 +124,15 @@ var vm1 = new Vue({
     toggleOK:function () {
       this.ok = !this.ok
     }
+  }
+})
+var vm2 = new Vue({
+  el:'#example1',
+  data:{
+    items:[
+      {message:'Foo'},
+      {message:'Bar'}
+    ]
   }
 })
 </script>

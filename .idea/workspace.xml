@@ -26,8 +26,8 @@
       <file leaf-file-name="Test5.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/Test5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="523">
+              <caret line="131" column="7" selection-start-line="131" selection-start-column="7" selection-end-line="131" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -157,16 +157,15 @@
       <workItem from="1531492579384" duration="866000" />
       <workItem from="1531530696704" duration="2912000" />
       <workItem from="1531655507066" duration="4311000" />
-      <workItem from="1531659969503" duration="1358000" />
+      <workItem from="1531659969503" duration="3608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19814000" />
+    <option name="totallyTimeSpent" value="22064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1918" y="104" width="1748" height="873" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13856813" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -309,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/Test5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="523">
+          <caret line="131" column="7" selection-start-line="131" selection-start-column="7" selection-end-line="131" selection-end-column="7" />
         </state>
       </provider>
     </entry>
