@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app1">
+  <h1 v-if="ok">Yes</h1>
+  <h1 v-else>No</h1>
+  <template v-if="ok">
+    <h1>在 template 元素上使用 v-if 条件渲染分组</h1>
+    <p>组内元素</p>
+  </template>
+  <template v-if="loginType === 'username'">
+    <label>Username</label>
+    <input placeholder="username可复用">
+  </template>
+  <template v-else>
+    <label>Email</label>
+    <input placeholder="email address可复用">
+  </template>
+  <button @click="toggleLogin">Toggle</button>
+  <br>
+  <template v-if="loginType === 'username'">
+    <label>Username</label>
+    <input placeholder="不可复用" key="username-input">
+  </template>
+  <template v-else>
+    <label>Email</label>
+    <input placeholder="不可复用" key="email-input">
+  </template>
+  <h1 v-show="ok">Hello!</h1>
+  <br>
+  <p>频繁地切换，则使用 v-show 较好</p>
+  <p>很少改变，则使用 v-if 较好</p>
+  <button @click="toggleOK">toggleOK</button>
+
+</div>
+
+
+<script src="../vue/vue.js"></script>
+<script>
+var vm1 = new Vue({
+  el:'#app1',
+  data:{
+    ok:true,
+    loginType:'username!'
+  },
+  methods:{
+    toggleLogin:function(){
+      if(this.loginType==='username'){
+        this.loginType='email'
+      }
+      else{
+        this.loginType='username'
+
+      }},
+    toggleOK:function () {
+      this.ok = !this.ok
+    }
+  }
+})
+</script>
+</body>
+</html>

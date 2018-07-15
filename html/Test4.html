@@ -15,9 +15,20 @@
   <my-component class="baz boo">用在组件上</my-component>
 </div>
 <my-component>最外层使用my-component组件无法渲染为p标签</my-component>
+<div id="app-8" v-bind:style="{color:activeColor,fontSize:fontSize + 'px'}">对象语法</div>
+<div id="app-9" v-bind:style="styleObject">绑定到一个样式对象</div>
+<div id="app-10" v-bind:style="[baseStyle,overridingStyles]">v-bind:style 的数组语法可以将多个样式对象应用到同一个元素上</div>
+<div id="app-11" :style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }">多重值???什么都没有渲染</div>
+
 </body>
 <script src="../vue/vue.js"></script>
 <script>
+  var vm11 = new Vue({
+    el: '#app-11',
+    data:{
+
+    }
+  })
   var vm = new Vue({
     el:'.static',
     data:{
@@ -77,6 +88,32 @@
     el: '#app-6',
 
   })
-
+  var vm8 = new Vue({
+    el: '#app-8',
+    data: {
+      activeColor: 'red',
+      fontSize: 30
+    }
+  })
+  var vm9 = new Vue({
+    el: '#app-9',
+    data: {
+      styleObject:{
+        color: 'red',
+        fontSize: '40px'
+      }
+    }
+  })
+  var vm10 = new Vue({
+    el: '#app-10',
+    data: {
+      baseStyle:{
+        color: 'red'
+      },
+      overridingStyles:{
+        fontSize: '50px'
+      }
+    }
+  })
 </script>
 </html>
