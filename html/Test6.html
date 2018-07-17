@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app1">
+  <li v-for="todo in todos" v-if="!todo.isComplete">
+    {{ todo }}
+  </li>
+  <ul v-if="todos.length">
+    <li v-for="todo in todos">
+      {{todo}}
+    </li>
+  </ul>
+  <p>No todos left!</p>
+</div>
+<p>Event Handling</p>
+<div id="app2">
+  <button v-on:click="counter += 1">add 1</button>
+  <p>The button above has been clicked {{ counter }} times.</p>
+</div>
+<div id="app3">
+  <button v-on:click="greet">Greet</button>
+</div>
+<div id="app4">
+  <button v-on:click="say('hi')">Sat hi</button>
+  <button v-on:click="say('what')">Sat what</button>
+  <button v-on:click="warn('Form cannot be submitted yet.',$event)">Submit</button>
+</div>
+<script src="../vue/vue.js"></script>
+<script>
+  var vm4 = new Vue({
+    el:'#app4',
+    methods:{
+      say:function(message){
+        alert(message)
+      },
+      warn:function(msg,event) {
+        if (event) event.preventDefault()
+        alert(msg)
+      }
+    }
+  })
+  var vm3 = new Vue({
+    el:'#app3',
+    data:{
+      name:'Vue.js'
+    },
+    methods:{
+      greet:function(event){
+        alert('Hello '+this.name + '!')
+        if(event){
+          alert(event.target.tagName)
+        }
+      }
+    }
+  })
+  var vm2 = new Vue({
+    el:'#app2',
+    data:{
+      counter:0
+    }
+  })
+  var vm1 = new Vue({
+    el:'#app1',
+    data: {
+      todos:[
+        {isComplete: true},
+        {isComplete: false},
+        {isComplete: true},
+        {isComplete: false}
+      ]
+    }
+  })
+</script>
+</body>
+</html>
