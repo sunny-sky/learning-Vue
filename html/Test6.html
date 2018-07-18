@@ -29,8 +29,19 @@
   <button v-on:click="say('what')">Sat what</button>
   <button v-on:click="warn('Form cannot be submitted yet.',$event)">Submit</button>
 </div>
+<div id="app5">
+  <input v-on:keyup.enter="submit">
+</div>
 <script src="../vue/vue.js"></script>
 <script>
+  var vm5 = new Vue({
+    el:'#app5',
+    methods:{
+      submit:function(){
+      alert('submit')
+      }
+    }
+  })
   var vm4 = new Vue({
     el:'#app4',
     methods:{
