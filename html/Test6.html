@@ -32,8 +32,74 @@
 <div id="app5">
   <input v-on:keyup.enter="submit">
 </div>
+<div id="app6">
+  <input v-model="message" placeholder="edit me">
+  <p>Message is : {{message}}</p>
+  <span>Multiline message is:</span>
+  <p style="white-space: pre-line;">{{msg}}</p>
+  <br>
+  <textarea v-model="msg" placeholder="add muktiple lines"></textarea>
+  <br>
+  <input type="checkbox" id="checkbox" v-model="checked">
+  <label for="checkbox">{{checked}}</label>
+</div>
+<br>
+<div id="app7">
+  <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+  <label for="jack">Jack</label>
+  <input type="checkbox" id="john" value="John" v-model="checkedNames">
+  <label for="jack">John</label>
+  <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+  <label for="jack">Mike</label>
+  <br>
+  <span>Checked names: {{checkedNames}}</span>
+</div>
+<div id="app8">
+  <input type="radio" id="one" value="吴宣仪" v-model="picked">
+  <label for="one">吴宣仪</label>
+  <br>
+  <input type="radio" id="two" value="孟美岐" v-model="picked">
+  <label for="two">孟美岐</label>
+  <br>
+  <span>Picked: {{ picked }}</span>
+</div>
+<div id="app9">
+  <select v-model="selected">
+    <option disabled value="">请选择</option>
+    <option>吴宣仪</option>
+    <option>孟美岐</option>
+    <option>程潇</option>
+  </select>
+  <span>Selected:{{selected}}</span>
+</div>
 <script src="../vue/vue.js"></script>
 <script>
+  var vm9 = new Vue({
+    el:'#app9',
+    data:{
+      selected:''
+    }
+  })
+  var vm8 = new Vue({
+    el:'#app8',
+    data:{
+      picked:''
+    }
+  })
+  var vm7 = new Vue({
+    el:'#app7',
+    data:{
+      checkedNames:[]
+    }
+  })
+  var vm6 = new Vue({
+    el:'#app6',
+    data:{
+      message:'Hello',
+      msg:'ready? go',
+      checked:false
+    }
+  })
   var vm5 = new Vue({
     el:'#app5',
     methods:{
