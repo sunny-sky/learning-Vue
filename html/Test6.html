@@ -72,8 +72,19 @@
   </select>
   <span>Selected:{{selected}}</span>
 </div>
+<div id="app10">
+  <p>v-model.lazy="***"</p>
+  <input v-model.lazy="msg"/>
+  <p>{{msg}}</p>
+</div>
 <script src="../vue/vue.js"></script>
 <script>
+  var vm10 = new Vue({
+    el:'#app10',
+    data:{
+      msg:'Hello'
+    }
+  })
   var vm9 = new Vue({
     el:'#app9',
     data:{
