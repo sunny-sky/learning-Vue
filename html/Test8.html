@@ -8,10 +8,32 @@
 <div id="app1">
 
   <custom-input v-model="searchText"></custom-input>
-</div>
+  <p>{{searchText}}</p>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <base-checkbox v-model="lovingVue"></base-checkbox>
+  <span>自定义组件的 v-model</span>
+  </div>
+
+
+
+<script src="../vue/vue.js"></script>
 <script>
+  Vue.component('base-checkbox', {
+    model: {
+      prop: 'checked',
+      event: 'change'
+    },
+    props: {
+      checked: Boolean
+    },
+    template: `
+    <input
+      type="checkbox"
+      v-bind:checked="checked"
+      v-on:change="$emit('change', $event.target.checked)"
+    >
+  `
+  })
   Vue.component('custom-input', {
     props: ['value'],
     template: `
@@ -24,7 +46,8 @@
   new Vue({
     el:'#app1',
     data:{
-      searchText:'default'
+      searchText:'default',
+      lovingVue:true
     }
   })
 </script>
